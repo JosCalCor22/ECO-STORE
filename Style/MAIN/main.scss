@@ -1,0 +1,201 @@
+.main{
+  padding: 0 20px;
+  &__article{
+    width: inherit;
+    display: flex;
+    margin: 40px 0;
+    &--text{
+      flex-direction: column;
+      justify-content: center;
+      display: inherit;
+      text-align: left;
+      width: 50%;
+      gap: 50px;
+      padding: 0 50px;
+      color: $Primary-font-color;
+      h1{
+        font-size: 4.0rem;
+        margin-top: 20px;
+      }
+      p{
+        font-size: 1.6rem;
+      }
+      &-botton{
+        height: 50px;
+        width: 200px;
+        padding: 0 20px;
+        border-radius: 60px;
+        background-color: $Thirtly-color;
+        button{
+          text-align: left;
+          height: 100%;
+          width: 100%;
+          border: none;
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: $Secondly-font-color;
+          background-color: transparent;
+          font-family: "IBM Plex Sans", sans-serif;
+        }
+      }
+    }
+    &--img{
+      width: 50%;
+      height: 580px;
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../../Assets/img/main-2.jpg");
+    }
+  }
+  &__skincare{
+    margin-top: 50px;
+    &--tittle{
+      h2{
+        font-size: 3.8rem;
+        font-weight: lighter;
+        color: $Primary-font-color;
+      }
+    }
+    &--card{
+      @include section-card;
+      &-item{
+        @include card-skincare;
+        .icon{
+          justify-content: right;
+          display: flex;
+        }
+        .img{
+          justify-content: center;
+          display: flex;
+          width: 100%;
+          img{
+            width: 100%;
+            height: 225px;
+            border-radius: 10px;
+          }
+        }
+        .info{
+          h3{
+            font-size: 1.6rem;
+          }
+          p{
+            font-size: 1.2rem;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+  &__furniture{
+    margin-top: 50px;
+    &--tittle{
+      h2{
+        font-size: 3.8rem;
+        font-weight: lighter;
+        color: $Primary-font-color;
+      }
+    }
+    &--card{
+      @include section-card;
+      margin-top: 20px;
+      &-item{
+        @include card-furniture;
+        .icon{
+          justify-content: right;
+          display: flex;
+        }
+        .img{
+          justify-content: center;
+          display: flex;
+          width: 100%;
+          img{
+            width: 100%;
+            height: 225px;
+            border-radius: 10px;
+          }
+        }
+        .info{
+          h3{
+            font-size: 1.6rem;
+          }
+          p{
+            font-size: 1.2rem;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+  &__info{
+    flex-direction: column;
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    margin-top: 50px;
+    h2{
+      font-weight: 100;
+      font-size: 3.8rem;
+      color: $Primary-font-color;
+    }
+    &--about{
+      justify-content: space-evenly;
+      display: flex;
+      width: inherit;
+      padding: 0 40px;
+      margin: 50px 0;
+      .img1, .img2{
+        place-items: center;
+        display: flex;
+        gap: 10px;
+        img{
+          width: 100px;
+          height: 100px;
+        }
+        p{
+          text-align: center;
+          width: 200px;
+          font-weight: 500;
+          color: $Thirtly-color;
+        }
+      }
+    }
+    &--gallery{
+      width: 100%;
+      margin-bottom: 50px;
+      .photos{
+        justify-content: center;
+        flex-wrap: wrap;
+        display: flex;
+        gap: 20px;
+        img{
+          width: 225px;
+          border-radius: 20px;
+        }
+      }
+    }
+    &--map{
+      flex-direction: column;
+      display: flex;
+      width: 100%;
+      margin-bottom: 60px;
+      color: $Thirtly-color;
+      h3{
+        font-size: 2.0rem;
+        margin: 8px 0;
+        font-weight: 100;
+      }
+      p{
+        font-size: 1.4rem;
+      }
+      .img-map{
+        width: 100%;
+        padding: 0 20px;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@media (min-width: 650px) {
+  body {
+    overflow-x: hidden;
+  }
+  .main__article {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .main__article--text {
+    text-align: center;
+    place-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  .main__article--text a button {
+    text-align: center;
+  }
+  .main__article--img {
+    width: 100%;
+  }
+  .main__skincare--card::-webkit-scrollbar {
+    width: 0;
+  }
+  .main__skincare--card {
+    scroll-snap-type: x mandatory;
+    justify-content: normal;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    row-gap: 0;
+    padding: 20px 0;
+    transition: all 0.5s ease-out;
+  }
+  .main__skincare--card-item {
+    scroll-snap-align: center;
+  }
+  .main__skincare--card-item h3 {
+    width: 225px;
+  }
+  .main__skincare--card-item p {
+    white-space: normal;
+  }
+}/*# sourceMappingURL=responsive.css.map */

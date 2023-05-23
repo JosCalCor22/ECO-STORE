@@ -1,0 +1,368 @@
+//VARIABLES
+$Primary-color:  #D9D9D9;
+$Secondly-color: #E9E6E6;
+$Font-color: #000000;
+$Principal-font: 'IBM Plex Sans', sans-serif;
+//MIXINS
+@mixin buttons{
+  border: none;
+  border-radius: 50%;
+  background-color: $Secondly-color;
+}
+@mixin card{
+  flex-direction: column;
+  display: flex;
+  border-radius: 10px;
+  background-color: $Primary-color;
+}
+@mixin gallery{
+  border-radius: 10px;
+  background-color: $Primary-color;
+}
+//MAIN LABELS
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+  font-size: 62.5%;
+  font-family: $Principal-font;
+}
+h1{
+  font-weight: bold;
+  font-size: 3.0rem;
+}
+h2{
+  font-weight: 500;
+}
+p{
+  font-size: 1.2rem;
+}
+//GENERAL LABELS
+.header{
+  width: 100%;
+  padding: 20px;
+  background-color: $Primary-color;
+  &__nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &--logo{
+      place-items: center;
+      display: flex;
+      width: 50%;
+      gap: 10px;
+      span{
+        height: 40px;
+        width: 40px;
+        @include buttons;
+      }
+      p{
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+    &--icons{
+      justify-content: right;
+      place-items: center;
+      display: flex;
+      width: 50%;
+      gap: 20px;
+      span{
+        height: 30px;
+        width: 30px;
+        @include buttons;
+      }
+    }
+  }
+}
+.main{
+  padding: 0 20px;
+  &__article{
+    width: inherit;
+    display: flex;
+    margin: 40px 0;
+    &--text{
+      flex-direction: column;
+      justify-content: left;
+      display: inherit;
+      text-align: left;
+      width: 50%;
+      gap: 30px;
+      padding: 0 50px;
+      h1{
+        font-size: 4.0rem;
+        margin-top: 20px;
+      }
+      span{
+        height: 60px;
+        width: 200px;
+        border-radius: 20px;
+        margin-bottom: 80px;
+        background-color: $Secondly-color;
+      }
+    }
+    &--img{
+      place-items: center;
+      justify-content: center;
+      display: flex;
+      width: 50%;
+      span{
+        height: 100%;
+        width: 80%;
+        border-radius: 20px;
+        background-color: $Secondly-color;
+      }
+    }
+  }
+  &__skincare{
+    padding: 0 40px;
+    &--tittle{
+      font-size: 2.0rem;
+      margin-bottom: 20px;
+    }
+    &--cards{
+      justify-content: center;
+      place-items: center;
+      flex-wrap: wrap;
+      display: flex;
+      gap: 50px;
+      &-item{
+        @include card;
+        justify-content: center;
+        width: 200px;
+        gap: 5px;
+        padding: 0 10px;
+        .icon{
+          justify-content: end;
+          display: flex;
+          padding: 10px 0 0 0;
+          background-color: transparent;
+          span{
+            @include buttons;
+            width: 15px;
+            height: 15px;
+            background-color: $Secondly-color;
+          }
+        }
+        .img-card{
+          width: 80%;
+          height: 150px;
+          margin: 5px auto 0 auto;
+          background-color: $Secondly-color;
+        }
+        h3{
+          margin-top: 8px;
+          font-size: 1.0rem;
+        }
+        p{
+          font-size: .8rem;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  &__furniture{
+    margin-top: 50px;
+    padding: 0 40px;
+    &--tittle{
+      font-size: 2.0rem;
+      margin-bottom: 20px;
+    }
+    &--cards{
+      justify-content: center;
+      place-items: center;
+      flex-wrap: wrap;
+      display: flex;
+      gap: 50px;
+      &-item{
+        @include card;
+        justify-content: center;
+        width: 200px;
+        gap: 5px;
+        padding: 0 10px;
+        .icon{
+          justify-content: end;
+          display: flex;
+          padding: 10px 0 0 0;
+          background-color: transparent;
+          span{
+            @include buttons;
+            width: 15px;
+            height: 15px;
+            background-color: $Secondly-color;
+          }
+        }
+        .img-card{
+          width: 80%;
+          height: 150px;
+          margin: 5px auto 0 auto;
+          background-color: $Secondly-color;
+        }
+        h3{
+          margin-top: 8px;
+          font-size: 1.0rem;
+        }
+        p{
+          font-size: .8rem;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  &__info{
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    padding: 0 40px;
+    margin-top: 50px;
+    &--about{
+      h2{
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+      &-advantages{
+        justify-content: space-between;
+        flex-wrap: wrap;
+        display: flex;
+        gap: 15px;
+        padding: 0 20px;
+        .div__about{
+          place-items: center;
+          display: flex;
+          gap: 30px;
+          width: fit-content;
+          span{
+            @include buttons;
+            height: 90px;
+            width: 90px;
+          }
+        }
+      }
+    }
+    &--gallery{
+      margin-top: 30px;
+      h2{
+        font-size: 1.8rem;
+      }
+      &-photo{
+        justify-content: space-evenly;
+        display: flex;
+        width: 100%;
+        padding: 20px  0 0 0;
+        span{
+          @include gallery;
+          width: 30%;
+          height: 300px;
+        }
+      }
+    }
+    &--map{
+      flex-direction: column;
+      display: flex;
+      gap: 10px;
+      margin: 50px 0;
+      h2{
+        font-size: 1.8rem;
+      }
+      &-place{
+        width: 100%;
+        span{
+          display: flex;
+          width: inherit;
+          height: 400px;
+          margin: 20px 0;
+          border-radius: 10px;
+          background-color: $Secondly-color;
+        }
+        h3{
+          font-size: 1.2rem;
+          font-weight: 300;
+          margin-bottom: 4px;
+        }
+        p{
+          font-size: 1.0rem;
+        }
+      }
+    }
+  }
+}
+.footer{
+  padding: 20px;
+  width: 100%;
+  background-color: $Primary-color;
+  &__items{
+    justify-content: space-around;
+    display: flex;
+    &--list{
+      ul{
+        flex-direction: column;
+        display: flex;
+        gap: 8px;
+        padding-inline-start: 0;
+        h2{
+          font-size: 1.2rem;
+          margin-bottom: 4px;
+        }
+        li{
+          list-style: none;
+          font-size: 1.0rem;
+        }
+      }
+    }
+    &--social{
+      place-items: center;
+      display: flex;
+      gap: 15px;
+      span{
+        @include buttons;
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+}
+//MEDIA QUERIES
+@media screen and (max-width: 920px){
+  .main__info--about-advantages{
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 600px){
+  .main__info--gallery-photo{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    span{
+      width: 200px;
+    }
+  }
+}
+@media screen and (max-width: 400px){
+  .footer{
+    padding: 20px 40px;
+    &__items{
+      flex-direction: column;
+      place-items: center;
+      display: flex;
+      gap: 50px;
+      &--list{
+        ul{
+          place-items: center;
+        }
+      }
+      &--social{
+        justify-content: space-evenly;
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 350px){
+  .main{
+    padding: 0;
+  }
+}

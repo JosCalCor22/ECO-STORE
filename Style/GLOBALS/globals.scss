@@ -1,0 +1,77 @@
+//VARIABLES
+$Principal-color:  #FFEFE7;
+$Secondly-color: #FFDAC6;
+$Thirtly-color: #FA9500;
+$Primary-font-color: #7C6A0A;
+$Secondly-font-color: #FFFFFF;
+$Card-color: #BABD8D;
+$Principal-font: 'IBM Plex Sans', sans-serif;
+
+//MIXINS
+@mixin section-card-scroll{
+  scroll-snap-type: x mandatory;
+  justify-content: normal;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  row-gap: 0;
+  padding: 20px 0;
+  column-gap: 20px;
+  transition: all .5s ease-out;
+}
+@mixin section-card{
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  row-gap: 40px;
+  max-width: 950px;
+  column-gap: 50px;
+  margin: 20px auto;
+}
+@mixin card-skincare{
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+  width: 225px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: $Primary-font-color;
+  background-color: $Secondly-color;
+}
+@mixin card-furniture{
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+  width: 225px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: $Secondly-font-color;
+  background-color: $Card-color;
+}
+
+//GLOBALS
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  width: 100%;
+  font-family: $Principal-font;
+  background-color: $Principal-color;
+}
+h1{
+  font-weight: bold;
+  font-size: 3.0rem;
+}
+h2{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+p{
+  font-size: 1.4rem;
+}
